@@ -1,3 +1,7 @@
+![License](https://img.shields.io/github/license/Xnuvers007/Zafkhiel?color=blue&label=License)
+
+![Repo Size](https://img.shields.io/github/repo-size/Xnuvers007/Zafkhiel?color=red&label=Repo%20Size&logo=github&logoColor=black)
+
 # Zafkhiel
 Tools untuk membuat file di windows menjadi Tersembunyi, Alias Tidak terlihat
 
