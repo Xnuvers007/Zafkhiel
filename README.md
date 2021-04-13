@@ -50,6 +50,7 @@ Tools untuk membuat file di windows menjadi Tersembunyi, Alias Tidak terlihat
 
 # Sekian
 
-![Xnuvers 007](https://waifu2x.booru.pics/outfiles/7e05f5c79431a2090db58a896fe556d32b2e8938_s2_n2.png)
+![Xnuvers 007](https://github.com/Xnuvers007/Zafkhiel/blob/main/Tutor/Xnuvers007.png)
 
 Copyright by me Xnuvers007
+
