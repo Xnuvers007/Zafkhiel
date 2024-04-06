@@ -75,6 +75,7 @@ if EXIST "%lockFile%" (
     echo [1] Rahasiakan Folder
 )
 echo [2] Keluar
+echo [3] Periksa Pembaruan
 echo.
 set /p "choice=Masukkan pilihan (1/2/3): "
 if "%choice%"=="1" (
