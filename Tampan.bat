@@ -59,44 +59,23 @@ if "%choice%"=="1" (
 if "%choice%"=="2" exit /b
 
 :LOCK
-cls
-echo -------------------------------------
-echo          Folder Locker
-echo -------------------------------------
-echo.
-echo Mengunci Folder...
-ren "%folder%" "%lockFile%" >nul 2>&1
-attrib +h +s "%lockFile%" >nul 2>&1
-echo.
-echo Folder telah dirahasiakan.
-echo.
-pause
-goto START
-
+ren Rahasia "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+attrib +h +s "Control panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+echo Folder telah dirahasiakan
+goto End
 :UNLOCK
-cls
-echo -------------------------------------
-echo          Folder Locker
-echo -------------------------------------
-echo.
-set /a "attempt=3"
-:PASSWORD_PROMPT
-set /p "pass=Masukkan password [%attempt% percobaan tersisa]: "
-if "%pass%"=="%password%" (
-    echo Membuka Folder...
-    attrib -h -s "%lockFile%" >nul 2>&1
-    ren "%lockFile%" "%folder%" >nul 2>&1
-    echo.
-    echo Folder berhasil dibuka.
-) else (
-    set /a "attempt-=1"
-    if %attempt% gtr 0 (
-        echo Password salah. Silakan coba lagi.
-        goto PASSWORD_PROMPT
-    ) else (
-        echo Anda telah menggunakan semua percobaan. Keluar...
-    )
-)
-echo.
-pause
-goto START
+echo Masukkan password
+set/p "pass=>"
+if NOT %pass%== (MASUKAN PASSWORD DISINI) goto FAIL
+attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Rahasia
+echo Folder Unlocked successfully
+goto End
+:FAIL
+echo Password salah
+goto end
+:MDLOCKER
+md Rahasia
+echo Folder telah dibuat
+goto End
+:End
